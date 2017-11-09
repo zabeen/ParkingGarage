@@ -10,6 +10,7 @@ namespace ParkingGarage.Library
     {
         public int Level { get; }
         public List<Space> Spaces { get { return _spaces; } }
+        public int SpacesCount { get { return Spaces.Count; } }
 
         private List<Space> _spaces;
 

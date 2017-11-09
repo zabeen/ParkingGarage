@@ -18,12 +18,18 @@ namespace ParkingGarage.Library
             Size = size;
         }
 
-        public void ParkVehicle(Vehicle vehicle)
+        public bool ParkVehicle(Vehicle vehicle)
         {
-            _occupyingVehicle = vehicle;
+            if (!IsOccupied && vehicle.Size.SmallerOrEqualThan(Size))
+            {
+                _occupyingVehicle = vehicle;
+                return true;
+            }
+
+            return false;
         }
 
-        public void EmptyThisSpace()
+        public void Empty()
         {
             _occupyingVehicle = null;
         }
