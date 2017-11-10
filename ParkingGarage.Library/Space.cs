@@ -8,13 +8,15 @@ namespace ParkingGarage.Library
 {
     public class Space
     {
+        public string Id { get; }
         public Size Size { get; }
         public bool IsOccupied { get { return (_occupyingVehicle != null); } }
         
         private Vehicle _occupyingVehicle;
 
-        public Space(Size size)
+        public Space(string id, Size size)
         {
+            Id = id;
             Size = size;
         }
 
