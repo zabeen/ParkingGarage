@@ -17,7 +17,7 @@ namespace ParkingGarage.Library
             Width = width;
         }
 
-        public bool SmallerOrEqualThan(Size other)
+        public bool SmallerThanOrEqualTo(Size other)
         {
             return (Height <= other.Height && Length <= other.Length && Width <= other.Width);
         }

@@ -22,7 +22,7 @@ namespace ParkingGarage.Library
 
         public bool ParkVehicle(Vehicle vehicle)
         {
-            if (!IsOccupied && vehicle.Size.SmallerOrEqualThan(Size))
+            if (!IsOccupied && vehicle.Size.SmallerThanOrEqualTo(Size))
             {
                 _occupyingVehicle = vehicle;
                 return true;
